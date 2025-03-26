@@ -1,0 +1,79 @@
+/* seudo clases por seleccion
+seleccionar el primer hijo
+    :first-child */
+
+    
+
+ul li:first-child{
+    background-color: aqua;
+}        
+
+/*seleccionar el ultimo hijo
+    :last-child */
+
+ul li:last-child{
+    background-color: rgb(165, 137, 24);
+}    
+
+/*seleccionar otro hijo, se puede seleccionar cualquiera indicandole cual con numeros, ademas se le puede añadir la n para que aplique los estilos de 2 en 2 o 3 en 3 , segun el numero que le indicaste. Tambien podemos añadirle el signo + mas un numero para que empieze a aplicar desde ese ultimo numero que pusiste           :nth-child */
+
+ul li:nth-child(2n+4){
+    background-color: rgb(98, 45, 178);
+}    
+
+/* 
+p:nth-of-type(2) = sirve para seleccionar una etiqueta por tipo, el numero que se le indica dentro del parentesis es para seleccionar especificamente cual P, EN QUE POSICION ESTA EN EL DOCUMENTO HTML */
+
+p:nth-of-type(2){
+    background-color: red ;
+}
+
+/* not() = sirve para descartar*/
+
+*:not(button){
+    background-color: chartreuse;
+}
+
+/* :hover = cambiar estado al pasar el raton(mouse-cursor) */
+
+h2:hover{
+    color: darkblue;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* :focus = sirve para saber cuando una persona esta escribiendo en un formulario. Cambiar los estilos del foco de un formulario */
+
+form input:focus{
+    background-color: blue;
+}
+
+/* :checked = sirve para activar o desactivar una etiqueta*/
+
+div{
+    display: none;
+}
+
+input:checked ~ div{
+        display: block;
+}
+
+/* seudoelementos -> Before= para agregar contenido antes del texto de la etiqueta */
+
+h1::before{
+    content: 🤣;
+}
+/* after -> Agrega contendido despues del texto de la etiqueta */
+
+h2::after{
+    content: 😒;
+}
+
+/* ::first-letter  cambia el estilo de la primera letra de un parrafo */
+
+h2::first-letter{
+    font-size: 50px;
+    color: deeppink;
+}
+
+/* ::selection  sirve para la seleccion  */
